@@ -10,14 +10,17 @@ permissions:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
-
     strategy:
       matrix:
-        runtime:
-          - win-x64
-          - linux-x64
-          - osx-arm64
+        include:
+          - runtime: win-x64
+            runs-on: windows-latest
+          - runtime: linux-x64
+            runs-on: ubuntu-latest
+          - runtime: osx-arm64
+            runs-on: macos-latest
+
+    runs-on: ${{ matrix.runs-on }}
 
     steps:
       - name: Checkout
