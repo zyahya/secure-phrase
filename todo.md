@@ -4,3 +4,6 @@
 - [ ] Add option to clip to clipboard automatically
 - [ ] Write the readme file
 - [ ] Record a video to demonstrate the tool (in gif format)
+- [ ] Publish core layer on nuget
+  - [ ] Build github action to automate the publishing process
+- [ ] Build github action to build the complete project for win, mac and linux
